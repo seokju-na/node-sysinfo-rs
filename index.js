@@ -556,15 +556,14 @@ if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
 
 if (!nativeBinding) {
   if (loadErrors.length > 0) {
+    let a = 'unknown';
     try {
-      console.log(
-        require.resolve('sysinfo-rs-win32-ia32-msvc')
-      );
+      a = require.resolve('sysinfo-rs-win32-ia32-msvc');
     } catch {
     }
     const messages = loadErrors.map((err) => err.message).join('===\n===')
     throw new Error(
-      `${process.platform} ${process.arch} Cannot find native binding: ${messages}`,
+      `[${process.platform}/${process.arch}/${a}] Cannot find native binding: ${messages}`,
       {
         cause: loadErrors.reduce((err, cur) => {
           cur.cause = err
