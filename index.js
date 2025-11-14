@@ -556,10 +556,9 @@ if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
 
 if (!nativeBinding) {
   if (loadErrors.length > 0) {
+    const messages = loadErrors.map((err) => err.message).join('\n')
     throw new Error(
-      `Cannot find native binding. ` +
-        `npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). ` +
-        'Please try `npm i` again after removing both package-lock.json and node_modules directory.',
+      `${process.platform} ${process.arch} Cannot find native binding: ${messages}`
       {
         cause: loadErrors.reduce((err, cur) => {
           cur.cause = err
