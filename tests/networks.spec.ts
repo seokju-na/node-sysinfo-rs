@@ -1,6 +1,5 @@
-import { describe, test } from 'vitest'
+import { describe, test } from 'vitest';
 
 describe('getNetworkInterfaces', () => {
-  test('get networks', async () => {
-  })
-})
+  test('get networks', async () => {});
+});
