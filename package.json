@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.5",
-    "@napi-rs/cli": "3.4.1",
+    "@napi-rs/cli": "2.18.4",
     "systeminformation": "^5.27.11",
     "typescript": "5.9.3",
     "vitest": "4.0.8"

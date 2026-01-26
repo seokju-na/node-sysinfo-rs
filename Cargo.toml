@@ -9,11 +9,14 @@ publish = false
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = "=3.5.2"
-napi-derive = "=3.3.3"
+napi = "=2.16.17"
+napi-derive = "=2.16.13"
 
 [build-dependencies]
-napi-build = "=2.3.1"
+napi-build = "=1.2.1"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winnt"] }
 
 [profile.release]
 lto = true
