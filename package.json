@@ -1,6 +1,6 @@
 {
   "name": "sysinfo-rs",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "System information for Node.js",
   "main": "index.js",
   "repository": {
