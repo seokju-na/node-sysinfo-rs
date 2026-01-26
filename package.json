@@ -1,6 +1,6 @@
 {
   "name": "sysinfo-rs",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "System information for Node.js",
   "main": "index.js",
   "repository": {
@@ -25,18 +25,21 @@
     "index.js"
   ],
   "napi": {
-    "binaryName": "sysinfo-rs",
-    "targets": [
-      "x86_64-pc-windows-msvc",
-      "x86_64-apple-darwin",
-      "x86_64-unknown-linux-gnu",
-      "x86_64-unknown-linux-musl",
-      "aarch64-unknown-linux-gnu",
-      "i686-pc-windows-msvc",
-      "aarch64-apple-darwin",
-      "aarch64-unknown-linux-musl",
-      "aarch64-pc-windows-msvc"
-    ]
+    "name": "sysinfo-rs",
+    "triples": {
+      "defaults": false,
+      "additional": [
+        "x86_64-pc-windows-msvc",
+        "x86_64-apple-darwin",
+        "x86_64-unknown-linux-gnu",
+        "x86_64-unknown-linux-musl",
+        "aarch64-unknown-linux-gnu",
+        "i686-pc-windows-msvc",
+        "aarch64-apple-darwin",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc"
+      ]
+    },
   },
   "engines": {
     "node": ">= 10.20.0 < 11 || >= 12.17.0 < 13 || >= 14.0.0"
