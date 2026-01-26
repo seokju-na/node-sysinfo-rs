@@ -180,7 +180,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: create npm dirs
-        run: yarn napi create-npm-dirs
+        run: yarn napi create-npm-dir -t .
       - name: Download all artifacts
         uses: actions/download-artifact@v6
         with:
